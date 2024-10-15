@@ -11,13 +11,13 @@
 echo "Synced changes with remote repository"
 
 # Pull changes from remote repository
-git pull origin main    
+git pull 
 
 # Stage all changes
-git stage .
+git add .
 
 # Commit changes with message 'Updated'
 git commit -m "Updated"
 
 # Push changes to remote repository on branch 'main'
-git push origin main
+git push 
