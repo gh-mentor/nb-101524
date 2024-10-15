@@ -23,9 +23,9 @@ namespace PayrollLibrary
     */
 
     public class Company
-    {
+    {   
         private string name;
-        private CompanyAddress address;
+        private CompanyAddress address; 
         private string phoneNumber;
         private List<Department> departments;
 
@@ -34,28 +34,9 @@ namespace PayrollLibrary
             this.name = name;
             this.address = address;
             this.phoneNumber = phoneNumber;
-            departments = new List<Department>();
-        }
-        public List<Department> Departments => departments;
+            this.departments = new List<Department>();
 
-        public void AddDepartment(Department department)
-        {
-            departments.Add(department);
-        }
-
-        public Department? GetDepartment(int id)
-        {
-            foreach (Department department in departments)
-            {
-                if (department.Id == id)
-                {
-                    return department;
-                }
-            }
-            return null;
-        }
-
-    }
+    
 
     /*
     Create a class called CompanyAddress.

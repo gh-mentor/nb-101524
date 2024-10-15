@@ -57,7 +57,19 @@ namespace PayrollLibrary
 
         public void AddEmployee(Employee employee)
         {
-            _Employees.Add(employee);
+            // Throw an exception if the employee is null
+            if (employee = null)
+            {
+                throw new ArgumentNullException("Employee cannot be null");
+            }
+
+
+            // before addign, check if the employee is already in the list
+            if (_Employees.Contains(employee))
+            {
+                _Employees.Add(employee);
+            }
+
         }
 
         public override string ToString()
